@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf8">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Germania+One" rel="stylesheet">
+
+	<style>
+			  td {border: 1px solid black; font-size: 14px; padding-left: 5px;}
+			  body{font-family: 'Germania One', cursive; font-family: 'Baloo Chettan', cursive;background-color: #ccff66}
+			  .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 9%;
+}
+
+canvas{
+	border: dotted;
+	margin: auto;
+	margin-top: -500px;
+	margin-left: 500px;
+}
+.main{
+	margin-left: 850px;
+}
+		</style>
+</head>
+<body>
+	<h1 class="main">Game of LIfe</h1>
+			
+			<h1>Events	</h1>
+		
+			<button class="button" style="vertical-align:middle" onclick="pushGrasses()"><span>Kill </span></button>
+			<br>
+			<p>Enter the cordinates x </p>
+			<input   name="search" type="text" id='inputx' width ='100px'>
+			<br>
+			<p>Enter the cordinates y </p>
+			<input type="text" name="search" id='inputy'>
+			<br>
+			<p>Enter thetype person </p>
+			<input  type="text" name="search" id='animaltype'>
+			
+			<button class="button button2" onclick='addAnimal()'>Do it!</button>
+			<br>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+	<!-- <script type="text/javascript" src="random_matrix.js"></script> -->
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	
+	
+	
+
+	
+</body>
+</html>	
